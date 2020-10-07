@@ -23,24 +23,20 @@ public class GenericLinkedListTest {
 	LinkedList= new LinkedListClass<Integer>();
 	
 	LinkedList.insert(myFirstNode);
+	LinkedList.append(mySecondNode);
 	LinkedList.append(myThirdNode);
-	LinkedList.push(myFirstNode,mySecondNode);
 	LinkedList.printlist();
+	LinkedList.pop();
 	}
 	
 	@Test
-	public void ReturnTrueWhenMyFirstNodeAppend() {
-		Assert.assertTrue((LinkedList.head).equals(myFirstNode));}
+	public void mySecondNodebecomesHeadwhenmyFirstNodeisPopped() {
+		Assert.assertTrue((LinkedList.head).equals(mySecondNode));}
 	@Test
-	public void ReturnTrueWhenMySecondNodeAppend() {
-		Assert.assertTrue(((LinkedList.head).getNext()).equals(mySecondNode));}
-	@Test
-		public void ReturnTrueWhenMyThirdNodeAppend() {
-		Assert.assertTrue((LinkedList.tail).equals(myThirdNode));
-		}	
+	public void myThirdNodebecomesmySecondNodewhenmyFirstNodeisPopped() {
+		Assert.assertTrue(((LinkedList.head).getNext()).equals(myThirdNode));}		}	
 
 	
 
 	
-}
 
