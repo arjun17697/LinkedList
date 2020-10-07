@@ -11,20 +11,21 @@ import main.LinkedListNode;
 
 public class GenericLinkedListTest {
 	LinkedListClass<Integer> LinkedList;
-	private LinkedListNode<Integer> myFirstNode;
-	private LinkedListNode<Integer> mySecondNode;
-	private LinkedListNode<Integer> myThirdNode;
+	static private LinkedListNode<Integer> myFirstNode;
+	static private LinkedListNode<Integer> mySecondNode;
+	static private LinkedListNode<Integer> myThirdNode;
 
 	@Before
 	public void init() {
-	myFirstNode = new LinkedListNode<Integer>(70);
+	myFirstNode = new LinkedListNode<Integer>(56);
 	mySecondNode = new LinkedListNode<Integer>(30);
 	myThirdNode = new LinkedListNode<Integer>(70);
 	LinkedList= new LinkedListClass<Integer>();
 	
-	LinkedList.append(myThirdNode);
-	LinkedList.append(mySecondNode);
-	LinkedList.append(myFirstNode);
+	LinkedList.insert(myThirdNode);
+	LinkedList.insert(mySecondNode);
+	LinkedList.insert(myFirstNode);
+	LinkedList.printlist();
 	}
 	
 	@Test
