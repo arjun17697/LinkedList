@@ -58,7 +58,37 @@ public class LinkedListClass<T> {
 	 beforeNode.setNext(newNode);
 	 newNode.setNext(temp);
  }
+ 
+ public void pop() {
+	 ILinkedList<T> temp=head;
+	 head=head.getNext();
+	 
+ }
+	
+public void poptail() {
+	ILinkedList<T> temp=head;
+	while((!(temp.getNext()).equals(tail))) {
+		temp=temp.getNext();
 	}
+	tail=temp;
+	tail.setNext(null);
+	
+}
+
+public int search(T data) {
+	ILinkedList<T> temp=head;
+	int flag=1;
+	while(temp!=null && temp.getNext()!=null) {
+		if((temp.getT()).equals(data)) {
+			return flag;
+		}
+		flag ++;
+		temp=temp.getNext();
+		
+	}
+	return -1;
+}
+}
 	
 	
 
