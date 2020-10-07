@@ -27,17 +27,8 @@ public class LinkedListClass<T> {
 		}
 	}
 	
-	public void printList() {
-		System.out.print("Linked List=");
-		ILinkedList<T> temp=head;
-		do {
-			System.out.println(temp.getT());
-			if(!temp.equals(tail)) System.out.println(">");
-			temp=temp.getNext();
-		}while(temp.getNext()!= null);
-		System.out.println(temp.getT());
-		}
 	
+		
 	public void append(ILinkedList<T> newNode) {
 		if (this.tail == null) {
 			this.tail = newNode;
@@ -50,7 +41,25 @@ public class LinkedListClass<T> {
 			(this.head).setNext(temp);
 		}
 	}
+
+	public void printlist() {
+		System.out.print("Linked List=");
+		ILinkedList<T> temp=head;
+		do {
+			System.out.println(temp.getT());
+			if(!temp.equals(tail)) System.out.println(">");
+			temp=temp.getNext();
+		}while(temp.getNext()!= null);
+		System.out.println(temp.getT());
+		}
+	
+ public void push(ILinkedList<T> beforeNode,ILinkedList<T> newNode) {
+	 ILinkedList<T> temp=beforeNode.getNext();
+	 beforeNode.setNext(newNode);
+	 newNode.setNext(temp);
+ }
+	}
 	
 	
 
-}
+

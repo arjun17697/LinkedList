@@ -22,9 +22,9 @@ public class GenericLinkedListTest {
 	myThirdNode = new LinkedListNode<Integer>(70);
 	LinkedList= new LinkedListClass<Integer>();
 	
-	LinkedList.insert(myThirdNode);
-	LinkedList.insert(mySecondNode);
 	LinkedList.insert(myFirstNode);
+	LinkedList.append(myThirdNode);
+	LinkedList.push(myFirstNode,mySecondNode);
 	LinkedList.printlist();
 	}
 	
